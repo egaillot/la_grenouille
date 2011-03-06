@@ -1,0 +1,6 @@
+fr:
+  views:
+    user_sessions:
+      log_in: Sésame ouvre-toi
+      my_login: Je suis
+      my_password: et le mot de passe est

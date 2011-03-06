@@ -1,0 +1,79 @@
+body {
+	background: #162C16;
+	font:16px 'Gill Sans', 'Gill Sans Std', GillSans, Calibri, Trebuchet, sans-serif;
+	text-align:left;
+	color: #FFFFFF;
+}
+
+h1 {
+	font:30px 'Gill Sans', 'Gill Sans Std', GillSans, Calibri, Trebuchet, sans-serif;
+	font-weight: normal;
+	color: #9FEB9F;
+}
+
+
+hr {
+	margin-top: 70px;
+}
+
+p {
+color: #FFFFFF;
+}
+
+a:active {
+text-decoration: underline;
+color: #BE3F3F;
+}
+
+a:hover {
+text-decoration: underline;
+color: #BE3F3F;
+}
+
+.navigation_link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.question {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.most_supported_answer {
+	color: #9FEB9F;
+	text-decoration: none;
+}
+
+.main {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	min-width: 400px;
+}
+
+.header {
+	background: url(/images/logo_grenouille.png) no-repeat top right;
+	height: 200px;
+}
+
+.title {
+	font:45px 'Gill Sans', 'Gill Sans Std', GillSans, Calibri, Trebuchet, sans-serif;
+	font-weight: bold;
+	left: 0;
+	height: 47px;
+	padding-top: 40px;
+	color: #FFFFFF;
+}
+
+.logout_link {
+	color: #FFFFFF;
+	text-decoration: none;
+	height: 98px;
+}
+
+.logo {
+	position: relative;
+	right: 0;
+}

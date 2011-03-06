@@ -1,0 +1,4 @@
+fr:
+  models:
+    question:
+      no_answer_so_far: Pas de réponse pour l'instant

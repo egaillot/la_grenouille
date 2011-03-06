@@ -1,0 +1,43 @@
+<%# 
+#    La Grenouille - A vote engine with a different flavor
+#
+#    Copyright (C) 2010 - 2011  Emmanuel Gaillot (emmanuel.gaillot@gmail.com)
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+		<%= stylesheet_link_tag "global" %>
+	  <title><%= t 'views.shared.la_grenouille' %></title>
+		<%= yield :head %>
+  </head>
+  <body>
+    <div class='main'>
+      <div class='header'>
+        <div class='title'><%= t 'views.shared.la_grenouille' %></div>
+      </div>
+      <% if (flash[:error]) %>
+         <div class="flash_error"><%= flash[:error] %></div>
+      <% end %>
+      <div class='body'>
+        <%= yield %>
+        <br/>
+        <%= link_to(t('views.shared.logout'), user_session_path, :method => :delete, :class => 'logout_link') if UserSession.find %>
+      </div>
+    </div>
+  </body>
+</html>

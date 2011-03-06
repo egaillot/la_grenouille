@@ -1,0 +1,54 @@
+La Grenouille - A vote engine with a different flavor
+
+Copyright (C) 2010 - 2011  Emmanuel Gaillot (emmanuel.gaillot@gmail.com)
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+============================================================================
+
+
+
+user_sessions_controller_test:
+  * redirect to accessed page while unlogged after logging
+
+answers_controller:
+  * handle errors on bogus question_id
+
+delegated_answers_controller:
+  * handle errors on bogus trustee
+  
+literal_answers_controller:
+  * handle errors on empty content
+
+delegated_answer:
+  * find a way to get rid of circular dependency question <-> answer
+
+question:
+  * mean to combine answer.save! (in controllers) and question.answers << ?
+  
+NEXT FEATURES:
+* Decision report
+* Loops detection
+* Knowledge database
+* User administration
+
+
+François's wishes --
+* Nested questions : "What question led to this one?" / "Subsequent questions"
+* Tagging questions for future searches
+* List of questions posted during the last X days
+* List of "most active" questions during the last X days
+* After asking a question, send by mail an invitation to answer
+* List history of answers for a given question
+* Questions may include links to external references

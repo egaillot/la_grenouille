@@ -1,0 +1,11 @@
+fr:
+  views:
+    answers:
+      answer_given_x_times: "(réponse donnée {{count}} fois)"
+      answers_list: Je veux voir les réponses
+      new_answer: Je veux dire ce que j'en pense
+      my_answer: "Je réponds :"
+      my_delegated_answer: Je préfère voter comme
+      plus_one: Je pense pareil
+      questions_list: je retourne aux questions
+      report: Je veux voir le rapport de décision

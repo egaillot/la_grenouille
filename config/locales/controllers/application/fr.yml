@@ -1,0 +1,4 @@
+fr:
+  controllers:
+    application:
+      should_be_logged_in: Vous devez être authentifié pour accéder à cette fonctionnalité.

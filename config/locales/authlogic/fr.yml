@@ -1,0 +1,20 @@
+fr:
+  authlogic:
+    error_messages:
+      login_blank: doit être renseigné
+      login_not_found: n'est pas valide
+      login_invalid: ne doit comporter que des lettres, des nombres, ou les caractères .-_@
+      consecutive_failed_logins_limit_exceeded: Trop d'échecs d'authentification ; votre compte est désactivé.
+      email_invalid: doit avoir un format d'adresse électronique
+      password_blank: doit être renseigné
+      password_invalid: n'est pas valide
+      not_active: Votre compte n'est pas actif
+      not_confirmed: La création de votre compte n'est pas encore confirmée
+      not_approved: La création de votre compte n'est pas encore approuvée
+      no_authentication_details: Les informations que vous avez fournies sont insuffisantes pour vous authentifier
+    models:
+      utilisateur_session: la session utilisateur
+    attributes:
+      user_session:
+        login: L'identifiant
+        password: Le mot de passe

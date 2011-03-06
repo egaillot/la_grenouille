@@ -1,0 +1,34 @@
+<%# 
+#    La Grenouille - A vote engine with a different flavor
+#
+#    Copyright (C) 2010 - 2011  Emmanuel Gaillot (emmanuel.gaillot@gmail.com)
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+%>
+
+<h1><%= @question.content %></h1>
+
+<% @answers.each do |answer_content, occurrence| %>
+  <p>
+    <% form_for [@question, LiteralAnswer.new] do |form| %>
+      <%= answer_content %> <%= t('views.answers.answer_given_x_times', :count => occurrence) %>
+      <%= form.hidden_field :content, :value => answer_content %>
+      <%= form.submit t('views.answers.plus_one') %>
+    <% end %>
+  </p>
+<% end %>
+
+<hr/>
+<%= link_to t('views.answers.new_answer'), new_question_answer_path(@question), :class => 'navigation_link' %> <%= t 'views.shared.or' %>
+<%= link_to t('views.answers.questions_list'), questions_path, :class => 'navigation_link' %> ?
